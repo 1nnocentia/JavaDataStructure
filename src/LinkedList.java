@@ -1,11 +1,12 @@
 public class LinkedList {
     private Node head; //declare head as first node in linked list and only could be use in linkedlink class
 
-    class Node {
-        int data;
-        Node next;
+    class Node { //innerclass: element in linked list
+        int data; //store node value
+        Node next; //store next node reference
 
-        Node (int data) {
+        //constructor
+        Node (int data) { //fill data value and set next=null
             this.data = data;
             this.next = null;
         }
