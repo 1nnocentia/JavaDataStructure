@@ -40,9 +40,25 @@ public class LinkedList {
     public void traverse() { //display linked list
         Node current = head; //start with head
         while (current != null) { //stop when null
-            System.out.println(current.data + "-> ");
+            System.out.print(current.data + "-> ");
             current = current.next; //move to next node
         }
         System.out.println("null");
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+
+        list.insertAtBeginning(30);
+        list.insertAtBeginning(20);
+        list.insertAtBeginning(10);
+
+        System.out.println("Sebelum di hapus: ");
+        list.traverse();
+
+        list.delete(20);
+
+        System.out.println("Setelah di hapus: ");
+        list.traverse();
     }
 }
