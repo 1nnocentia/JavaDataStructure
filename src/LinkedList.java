@@ -13,13 +13,13 @@ public class LinkedList {
     }
 
     public void insertAtBeginning(int data) {
-        Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
+        Node newNode = new Node(data); //made new node
+        newNode.next = head; //connect new node to head 
+        head = newNode; //new node now is head
     }
 
     public void delete (int key) {
-        if (head == null) return;
+        if (head == null) return; //if linked list is empty, return and do nothing
 
         //if head is to be deleted
         if (head.data == key) {
@@ -33,11 +33,11 @@ public class LinkedList {
         }
 
         if (current.next != null) {
-            current.next = current.next.next;
+            current.next = current.next.next; //connect the current.next to current.next.next so that current.next is deleted
         }
     }
 
-    public void traverse() {
+    public void traverse() { //display linked list
         Node current = head;
         while (current != null) {
             System.out.println(current.data + "-> ");
