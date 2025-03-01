@@ -1,5 +1,5 @@
 public class LinkedList {
-    private Node head;
+    private Node head; //declare head as first node in linked list and only could be use in linkedlink class
 
     class Node {
         int data;
