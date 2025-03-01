@@ -38,10 +38,10 @@ public class LinkedList {
     }
 
     public void traverse() { //display linked list
-        Node current = head;
-        while (current != null) {
+        Node current = head; //start with head
+        while (current != null) { //stop when null
             System.out.println(current.data + "-> ");
-            current = current.next;
+            current = current.next; //move to next node
         }
         System.out.println("null");
     }
